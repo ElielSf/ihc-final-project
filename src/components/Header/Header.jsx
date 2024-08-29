@@ -23,9 +23,9 @@ export default function Header() {
                 <CgProfile className="header_element_icon" />
                 <p className="header_element_title">PERFIL</p>
             </div>
-            <div className="header_element">
+            <div className="header_element_car">
                 <MdOutlineLocalGroceryStore className="header_element_icon" />
-                <p className="header_element_title">CARRINHO</p>
+                <p className="header_element_car_title">CARRINHO</p>
             </div>
         </div>
     )

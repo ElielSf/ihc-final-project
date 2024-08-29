@@ -1,11 +1,19 @@
-.header-wrapper {
-background-color: aqua;
+.header_wrapper {
+    width: 100vw;
+    height: 20vh;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
 }
 
-.header-logo {
-
+.header-element {
+    display: none;
 }
 
-.search-bar-icon {
-    background-color: white;
+.search_bar_wrapper {
+    display: none;
 }
