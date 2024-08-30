@@ -9,18 +9,22 @@ export default function Footer() {
             <div className="footer_wrapper_content_top">
                 <div className="footer_wrapper_content_top_about">
                     <h4 className="footer_wrapper_content_top_about_title">Empresa</h4>
-                    <p className="footer_wrapper_content_top_about_text">Termos e Condições</p>
-                    <p className="footer_wrapper_content_top_about_text">Políticas de Privacidade</p>
-                    <p className="footer_wrapper_content_top_about_text">Sobre nós</p>
+                    <div className="footer_wrapper_content_top_about_topic">
+                        <p className="footer_wrapper_content_top_about_topic_text">Termos e Condições</p>
+                        <p className="footer_wrapper_content_top_about_topic_text">Políticas de Privacidade</p>
+                        <p className="footer_wrapper_content_top_about_topic_text">Sobre nós</p>
+                    </div>                    
                 </div>
                 <div className="footer_wrapper_content_top_logo">
                     <img className="footer_wrapper_content_top_logo_img" src="" alt="LOGO" />
                 </div>
                 <div className="footer_wrapper_content_top_about">
                     <h4 className="footer_wrapper_content_top_about_title">Dúvidas</h4>
-                    <p className="footer_wrapper_content_top_about_text">Suporte ao Cliente</p>
-                    <p className="footer_wrapper_content_top_about_text">Contato-nos</p>
-                    <p className="footer_wrapper_content_top_about_text">FAQ</p>
+                    <div className="footer_wrapper_content_top_about_topic">
+                        <p className="footer_wrapper_content_top_about_topic_text">Suporte ao Cliente</p>
+                        <p className="footer_wrapper_content_top_about_topic_text">Contato-nos</p>
+                        <p className="footer_wrapper_content_top_about_topic_text">FAQ</p>
+                    </div>
                 </div>
             </div>
             <div className="footer_wrapper_linebox">

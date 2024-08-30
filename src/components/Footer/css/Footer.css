@@ -34,7 +34,7 @@
     margin-bottom: 7px;
 }
 
-.footer_wrapper_content_top_about_text {
+.footer_wrapper_content_top_about_topic_text {
     font-size: 10pt;
     margin-left: 20px;
     margin-bottom: 5px;
@@ -89,7 +89,7 @@
         font-size: 16pt;
     }
 
-    .footer_wrapper_content_top_about_text {
+    .footer_wrapper_content_top_about_topic_text {
         font-size: 12pt;
     }
 
@@ -110,8 +110,8 @@
     }
 
     .footer_wrapper_content_bottom_icons_icon {
-        width: 5%;
-        height: auto;
+        width: auto;
+        height: 50%;
         margin: 0 10px;
     }
 
@@ -121,7 +121,28 @@
 
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .footer_wrapper_content_top_about {
+        width: 30%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }    
+
+    .footer_wrapper_content_top_about_topic {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
     }
     
     .footer_wrapper_content_top_logo {
@@ -130,14 +151,17 @@
     }
 
     .footer_wrapper_content_top_about_title {
-        font-size: 20pt;
+        font-size: 22pt;
+        text-align: left;
+        padding-left: 9px;
+        width: 100%;
     }
 
-    .footer_wrapper_content_top_about_text {
+    .footer_wrapper_content_top_about_topic_text {
         font-size: 14pt;
     }
 
     .footer_wrapper_content_bottom_copyright {
-        font-size: 14pt;
+        font-size: 15pt;
     }
 }
