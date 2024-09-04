@@ -1,19 +1,83 @@
-.header_wrapper {
-    width: 100vw;
-    height: 20vh;
+.header {
+  width: 100vw;
+  height: 25vh;
 
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "menu logo car"
+    "searchbar searchbar searchbar";
 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
+  background-color: #f5e2b8;
 }
 
-.header-element {
-    display: none;
+.header_logo {
+  grid-area: logo;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
-.search_bar_wrapper {
-    display: none;
+.header_logo img {
+  width: 60%;
+  height: auto;
+}
+
+.header_searchbar {
+  grid-area: searchbar;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_searchbar div {
+  width: 75%;
+  height: 50%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 5px grey;
+
+  display: flex;
+  align-items: center;
+}
+
+.header_searchbar div input {
+  width: 90%;
+  height: 100%;
+
+  border-radius: 12px;
+  border: none;
+  padding-left: 2%;
+  font-size: 12pt;
+}
+
+.header_searchbar div .icon {
+    width: 7%;
+    height: auto;
+}
+
+.header_element,
+.header_element-car p {
+  display: none;
+}
+
+.header_element-car,
+.header_element-menu {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_element-car .icon,
+.header_element-menu .icon {
+  width: 40%;
+  height: auto;
 }
