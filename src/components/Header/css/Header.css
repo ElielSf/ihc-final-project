@@ -27,6 +27,10 @@
   height: auto;
 }
 
+.header_logo img:hover {
+  cursor: pointer;
+}
+
 .header_searchbar {
   grid-area: searchbar;
 
@@ -63,12 +67,17 @@
 }
 
 .header_searchbar div .icon {
-    width: 7%;
-    max-width: 25px;
-    height: auto;
+  width: 7%;
+  max-width: 25px;
+  height: auto;
 }
 
-.header_element,
+.header_searchbar div .icon:hover {
+  cursor: pointer;
+}
+
+.header_element-wish,
+.header_element-profile,
 .header_element-car p {
   display: none;
 }
@@ -108,6 +117,99 @@
   }
 }
 
-@media (min-width: 1024px) and (min-height: 768px) {
-  /* Seus estilos aqui */
+@media (min-width: 1024px) and (min-height: 600px) {
+  .header {
+    width: 100vw;
+    height: 10vh;
+    min-height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.4fr 0.4fr 0.4fr 0.1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo searchbar wish profile car .";
+  }
+
+  .header_logo img {
+    max-height: 80px;
+  }
+
+  .header_element-menu {
+    display: none;
+  }
+
+  .header_logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .header_searchbar {
+    grid-area: searchbar;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_searchbar div {
+    width: 90%;
+    height: 40%;
+    border-radius: 0.7em;
+
+    display: flex;
+  }
+
+  .header_searchbar div input {
+    width: 90%;
+    height: 100%;
+    font-size: 14pt;
+    border-radius: 0.7em;
+  }
+
+  .header_searchbar div .icon {
+    width: 10%;
+    height: auto;
+  }
+
+  .header_element-wish {
+    grid-area: wish;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_element-profile {
+    grid-area: profile;
+    display: flex;
+    align-items: center;
+  }
+
+  .header_element-car {
+    grid-area: car;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_element-car p {
+    display: flex;
+  }
+
+  .header_element-car .icon,
+  .header_element-profile .icon,
+  .header_element-wish .icon {
+    width: 25%;
+    height: auto;
+    margin-right: 0.3rem;
+  }
+
+  .header_element-car:hover,
+  .header_element-profile:hover,
+  .header_element-wish:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
 }

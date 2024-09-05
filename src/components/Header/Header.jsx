@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
 import { LuHeart } from "react-icons/lu";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
+import { FaRegHeart } from "react-icons/fa6";
 
 import "./css/Header.css"
 
@@ -21,11 +22,11 @@ export default function Header() {
             <div className="header_element-menu">
                 <RxHamburgerMenu className="icon" />
             </div>
-            <div className="header_element">
-                <LuHeart className="icon" />
+            <div className="header_element-wish">
+                <FaRegHeart className="icon" />
                 <p className="header_element_title">LISTA DE DESEJOS</p>
             </div>
-            <div className="header_element">
+            <div className="header_element-profile">
                 <CgProfile className="icon" />
                 <p className="header_element_title">PERFIL</p>
             </div>
