@@ -14,7 +14,7 @@ export default function Header() {
             </div>
             <div className="header_searchbar">
                 <div>
-                    <input className="search_bar_input" type="text" min="3" title="Barra de pesquisa" placeholder="Faça sua pesquisa" />
+                    <input className="search_bar_input" type="text" min="3" title="Barra de pesquisa" />
                     <PiMagnifyingGlassBold className="icon" />
                 </div>
             </div>
