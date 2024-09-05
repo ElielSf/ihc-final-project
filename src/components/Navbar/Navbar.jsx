@@ -2,7 +2,7 @@ import "./css/Navbar.css"
 
 export default function Navbar() {
     return (
-        <div className="navbar_wrapper">
+        <div className="navbar">
             <div className="navbar_item">
                 <p className="navbar_item_title">HARDWARE</p>
             </div>

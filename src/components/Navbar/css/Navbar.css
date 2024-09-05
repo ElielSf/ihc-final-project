@@ -1,0 +1,37 @@
+.navbar {
+    display: none;
+}
+
+@media (min-width: 1024px) and (min-height: 600px) {
+    .navbar {
+        width: 100vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow-x: hidden;
+
+        background-color: #000000;
+    }
+
+    .navbar_item {
+        width: 15%;
+        text-align: center;
+        color: white;
+        font-weight: 200;
+    }
+
+    .side-border {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    .navbar_item_title {
+        font-size: 10pt;
+    }
+
+    .navbar_item_title:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
