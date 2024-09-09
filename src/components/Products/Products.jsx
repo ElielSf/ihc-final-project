@@ -41,7 +41,7 @@ export default function Products() {
                 <h2>NOSSOS PRODUTOS</h2>
             </div>
             <div className="products_section">
-               {productList.map((product, index) => (
+                {productList.map((product, index) => (
                     <Product
                         key={index}
                         image={product.image}

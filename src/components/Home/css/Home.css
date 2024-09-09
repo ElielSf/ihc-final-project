@@ -1,3 +1,7 @@
 .home {
     background-color: #FAFAFB;
+    width: 100%;
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }

@@ -5,7 +5,7 @@ import "./css/Home.css";
 export default function Home() {
   return (
     <div className="home">
-      {/* <Carrossel /> finalizar depois */}
+      <Carrossel />
       <Products />
     </div>
   );
