@@ -2,7 +2,7 @@ import "./css/Product.card.css";
 
 export default function Product(props) {
     return (
-        <div className="product">
+        <div className="product" onClick={props.onClick}>
             <div className="product_image">
                 <img src={props.image} alt={props.alt} />
             </div>
