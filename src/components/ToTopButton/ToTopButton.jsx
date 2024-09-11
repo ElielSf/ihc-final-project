@@ -1,6 +1,8 @@
 import "./css/ToTopButton.css";
+import { useParams } from "react-router-dom";
 
 export default function ToTopButton() {
+  const { id } = useParams();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -9,9 +11,9 @@ export default function ToTopButton() {
   };
 
   return (
-    <div className="to_top_button">
+    <div className={id ? ("to_top_button-white") : ("to_top_button")}>
       <button>
-        <img src="seta-direita.svg" alt="Voltar para o topo" onClick={scrollToTop} />
+        <img src="/seta-direita.svg" alt="Voltar para o topo" onClick={scrollToTop} />
       </button>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Header() {
     return (
         <div className="header">
             <div className="header_logo">
-                <img src="./gAtlas-header.svg" alt="LOGO" />
+                <img src="/gAtlas-header.svg" alt="LOGO" />
             </div>
             <div className="header_searchbar">
                 <div>
