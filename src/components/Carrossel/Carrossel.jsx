@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -6,43 +6,37 @@ import "./css/Carrossel.css";
 
 export default function Carrossel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [images] = useState(['1.jpg', '2.jpg', '3.jpg']);
-
-  // Use ref to store the interval ID
-  const intervalRef = useRef(null);
+  const images = ['./1.svg', './2.svg', './3.svg'];
+  const [intervalId, setIntervalId] = useState(null); // Armazenar o ID do intervalo
 
   useEffect(() => {
-    // Start the interval
     startInterval();
 
-    return () => {
-      // Cleanup interval on component unmount
-      clearInterval(intervalRef.current);
-    };
+    return () => clearInterval(intervalId);
   }, [images.length]);
 
   const startInterval = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
+    const id = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
+    setIntervalId(id);
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    resetInterval(); // Reset the interval on click
+    resetInterval();
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-    resetInterval(); // Reset the interval on click
+    resetInterval();
   };
 
   const resetInterval = () => {
-    clearInterval(intervalRef.current); // Clear the existing interval
-    startInterval(); // Start a new interval
+    clearInterval(intervalId); // Limpa o intervalo atual
+    startInterval(); // Inicia um novo intervalo
   };
 
   return (
