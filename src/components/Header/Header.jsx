@@ -1,7 +1,6 @@
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
-import { LuHeart } from "react-icons/lu";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa6";
 
@@ -32,7 +31,7 @@ export default function Header() {
             </div>
             <div className="header_element-car">
                 <MdOutlineLocalGroceryStore className="icon" />
-                <p>CARRINHO</p>
+                <p className="header_element_title">CARRINHO</p>
             </div>
         </div>
     )

@@ -1,25 +1,23 @@
-import { useState, useEffect } from "react";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { useState, useEffect, useRef } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import "./css/Carrossel.css";
 
 export default function Carrossel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = ['./1.svg', './2.svg', './3.svg'];
-  const [intervalId, setIntervalId] = useState(null); // Armazenar o ID do intervalo
+  const images = ['1.svg', '2.svg', '3.svg'];
+  const intervalRef = useRef(null); // Usar um ref para o ID do intervalo
 
   useEffect(() => {
-    startInterval();
+    startInterval(); // Inicia o intervalo quando o componente monta
 
-    return () => clearInterval(intervalId);
-  }, [images.length]);
+    return () => clearInterval(intervalRef.current); // Limpa o intervalo ao desmontar
+  }, []);
 
   const startInterval = () => {
-    const id = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    setIntervalId(id);
+    }, 5000);
   };
 
   const handleNext = () => {
@@ -35,23 +33,23 @@ export default function Carrossel() {
   };
 
   const resetInterval = () => {
-    clearInterval(intervalId); // Limpa o intervalo atual
+    clearInterval(intervalRef.current); // Limpa o intervalo atual
     startInterval(); // Inicia um novo intervalo
   };
 
   return (
     <div className="carrossel">
-      <div className="carrossel_button">
-        <button className="left" onClick={handlePrevious}>
-          <IoIosArrowBack className="icon" />
+      <div className="carrossel_button_left">
+        <button onClick={handlePrevious}>
+          <IoIosArrowBack className="icon_arrow" />
         </button>
       </div>
       <div className="carrossel_images">
         <img src={images[currentIndex]} alt="Banner" />
       </div>
-      <div className="carrossel_button">
-        <button className="right" onClick={handleNext}>
-          <IoIosArrowForward className="icon" />
+      <div className="carrossel_button_right">
+        <button onClick={handleNext}>
+          <IoIosArrowForward className="icon_arrow" />
         </button>
       </div>
     </div>
