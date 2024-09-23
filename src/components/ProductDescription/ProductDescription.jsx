@@ -2,6 +2,7 @@ import "./css/ProductDescription.css";
 import { useParams } from "react-router-dom";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
+import { BsTruck } from "react-icons/bs";
 
 export default function ProductDescription() {
   const { id } = useParams();
@@ -12,6 +13,9 @@ export default function ProductDescription() {
       image: "/card-1.svg",
       alt: "Cadeira Thunder",
       title: "Cadeira Gamer THUNDER X3",
+      oldPrice: "1.105,16",
+      newPrice: "939,40",
+      cardPrice: "no cartão em até 12x de R$ 78,29 sem juros",
       description: `
       <p><strong>Cadeira Gamer Thunder X3 Verde</strong></p>
       <p>Transforme seu espaço de jogo em um verdadeiro centro de comando com a Cadeira Gamer Thunder X3 na cor verde vibrante. Projetada para oferecer conforto e estilo sem comprometer a funcionalidade, esta cadeira é ideal para gamers que buscam um desempenho excepcional aliado a um design marcante.</p><br />
@@ -32,6 +36,9 @@ export default function ProductDescription() {
       image: "/card-2.svg",
       alt: "Monitor Samsung",
       title: 'Monitor Samsung Odyssey CRG9 49" Polegadas 120Hz',
+      oldPrice: "8.499,00",
+      newPrice: "7.224,15",
+      cardPrice: "no cartão em até 12x de R$ 602,00 sem juros",
       description: `
     <p><strong>Monitor Samsung Odyssey CRG9 49" Polegadas 120Hz</strong></p>
     <p>Eleve sua experiência de visualização com o Monitor Samsung Odyssey CRG9, um monitor ultrawide de 49 polegadas com uma taxa de atualização de 120Hz. Ideal para jogos imersivos e multitarefa com sua tela curva que proporciona um campo de visão amplo e envolvente.</p><br />
@@ -52,6 +59,9 @@ export default function ProductDescription() {
       alt: "Placa de Vídeo GIGABYTE",
       title:
         "Placa de Vídeo GIGABYTE NVIDIA GeForce RTX 2080 Super Gaming OC, 8GB, GDDR6",
+      oldPrice: "3.432,71",
+      newPrice: "3.174,92",
+      cardPrice: "no cartão em até 12x de R$ 264,58 sem juros",
       description: `
     <p><strong>Placa de Vídeo GIGABYTE NVIDIA GeForce RTX 2080 Super Gaming OC</strong></p>
     <p>Aumente o desempenho gráfico do seu PC com a Placa de Vídeo GIGABYTE NVIDIA GeForce RTX 2080 Super. Com 8GB de memória GDDR6, é perfeita para jogos em alta resolução e tarefas exigentes de edição gráfica.</p><br />
@@ -71,6 +81,9 @@ export default function ProductDescription() {
       image: "/card-4.svg",
       alt: "Mouse Delux",
       title: "Delux-M800PRO PAW3370 19000 DPI",
+      oldPrice: "330,00",
+      newPrice: "280,50",
+      cardPrice: "no cartão em até 12x de R$ 23,37 sem juros",
       description: `
     <p><strong>Mouse Delux-M800PRO PAW3370 19000 DPI</strong></p>
     <p>O Mouse Delux-M800PRO é um mouse de alto desempenho com sensor PAW3370 e DPI ajustável de até 19000. Ideal para gamers que precisam de precisão e velocidade em suas jogadas.</p><br />
@@ -90,6 +103,9 @@ export default function ProductDescription() {
       image: "/card-5.svg",
       alt: "Headset Gamer",
       title: "Headset Gamer Logitech G935",
+      oldPrice: "1.169,00",
+      newPrice: "993,65",
+      cardPrice: "no cartão em até 12x de R$ 82,80 sem juros",
       description: `
     <p><strong>Headset Gamer Logitech G935</strong></p>
     <p>Desfrute de áudio imersivo e conforto prolongado com o Headset Gamer Logitech G935. Equipado com som surround 7.1 e drivers de áudio de alta qualidade, é perfeito para gamers que buscam uma experiência sonora superior.</p><br />
@@ -109,6 +125,9 @@ export default function ProductDescription() {
       image: "/card-6.svg",
       alt: "PLAYSTATION 5",
       title: "PLAYSTATION 5 825GB SONY + 1 Controle",
+      oldPrice: "3.719,90",
+      newPrice: "3.161,90",
+      cardPrice: "no cartão em até 12x de R$ 263,49 sem juros",
       description: `
     <p><strong>PLAYSTATION 5 825GB SONY + 1 Controle</strong></p>
     <p>O PlayStation 5 da Sony oferece uma experiência de jogo de próxima geração com gráficos incríveis, tempos de carregamento rápidos e uma vasta biblioteca de jogos. Inclui um console com 825GB de armazenamento e um controle.</p><br />
@@ -128,24 +147,29 @@ export default function ProductDescription() {
 
   return (
     <div className="product_description">
-      <div className="title_content">
+      <div className="title_container">
         <h1>{product.title}</h1>
       </div>
-      <div className="image_content">
+      <div className="image_container">
         <img src={product.image} alt={product.alt} />
       </div>
-      <div className="buy_content">
-        <div className="wrapper">
-          <p>R$ 1.300,00</p>
-          <div>
-            <button>COMPRAR</button>
-            <button>
-              <MdOutlineLocalGroceryStore className="icon" />
+      <div className="shop_container">
+        <div className="wrapper_values">
+          <p className="old_price">R$ {product.oldPrice}</p>
+          <p className="actual_price">R$ {product.newPrice}</p>
+          <p className="payment_method">{product.cardPrice}</p>
+          <p className="delivery-title"><BsTruck className="icon_truck"/> Envio para todo país</p>
+          <p className="delivery-description">Saiba os prazos de entrega e as formas de envio.</p>
+          <p className="delivery-term">Calcular prazo de entrega</p>
+        </div>
+        <div className="wrapper_buttons">
+            <button className="buy_button">COMPRAR</button>
+            <button className="cart_button">
+              <MdOutlineLocalGroceryStore className="icon_cart" />
             </button>
           </div>
-        </div>
       </div> 
-      <div className="description_content">
+      <div className="description_container">
         <div className="section">
           <p>DESCRIÇÃO</p>
           <FaArrowUp className="icon" />
