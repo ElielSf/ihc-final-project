@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Product from "./Products.card.jsx";
 import { useNavigate } from "react-router-dom"; // Importar o hook useNavigate
 import "./css/Products.css";
