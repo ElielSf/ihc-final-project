@@ -219,6 +219,8 @@
 
 .payment_method {
     font-style: italic;
+    font-size: 0.8rem;
+    margin-bottom: 5%;
 }
 
 .delivery-title {
