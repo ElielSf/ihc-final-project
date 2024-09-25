@@ -40,7 +40,7 @@ export default function ProductDescription() {
       newPrice: "7.224,15",
       cardPrice: "no cartão em até 12x de R$ 602,00 sem juros",
       description: `
-    <p><strong>Monitor Samsung Odyssey CRG9 49" Polegadas 120Hz</strong></p>
+    <p><strong>Monitor Samsung Odyssey CRG9 49" Polegadas 120Hz</strong></p><br />
     <p>Eleve sua experiência de visualização com o Monitor Samsung Odyssey CRG9, um monitor ultrawide de 49 polegadas com uma taxa de atualização de 120Hz. Ideal para jogos imersivos e multitarefa com sua tela curva que proporciona um campo de visão amplo e envolvente.</p><br />
     <p><strong>Características Principais:</strong></p>
     <ul>
@@ -172,7 +172,7 @@ export default function ProductDescription() {
       <div className="description_container">
         <div className="section">
           <p>DESCRIÇÃO</p>
-          <FaArrowUp className="icon" />
+          <FaArrowUp className="icon_arrow-up" />
         </div>
         <div className="description">
           <div dangerouslySetInnerHTML={{ __html: product.description }} />

@@ -8,10 +8,10 @@ import "./css/App.css";
 export default function App() {
   return (
     <div>
+      <ToTopButton />
       <Header />
       <Navbar />
       <Outlet />
-      <ToTopButton />
       <Footer />
     </div>
   );
