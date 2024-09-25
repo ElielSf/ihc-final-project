@@ -11,10 +11,8 @@ export default function ToTopButton() {
   };
 
   return (
-    <div className={id ? ("to_top_button-white") : ("to_top_button")}>
-      <button>
+      <button className="totopbutton">
         <img src="/up-button.svg" alt="Voltar para o topo" onClick={scrollToTop} />
       </button>
-    </div>
   );
 }
